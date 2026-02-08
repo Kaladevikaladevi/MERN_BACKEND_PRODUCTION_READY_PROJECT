@@ -10,4 +10,4 @@ router.get("/", protect, (req, res) => {
   });
 });
 
-export default router;
+export default router;   // ✅ REQUIRED

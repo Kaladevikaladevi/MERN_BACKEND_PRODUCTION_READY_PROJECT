@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import AppError from "../utils/appError.js";
 
 const protect = (req, res, next) => {
   let token;
@@ -14,11 +15,11 @@ const protect = (req, res, next) => {
       req.user = decoded.id;
       next();
     } catch (error) {
-      res.status(401).json({ message: "Not authorized" });
+      return next(new AppError("Not authorized, token failed", 401));
     }
   } else {
-    res.status(401).json({ message: "No token found" });
+    return next(new AppError("Not authorized, no token", 401));
   }
 };
 
-export default protect;
+export default protect;   // ✅ THIS LINE IS REQUIRED

@@ -14,3 +14,18 @@ Login User error
 
 3.Access Protected Route
 ![alt text](image-2.png)
+
+
+
+
+DAY 2
+
+1. Register with existing email
+![alt text](image.png)
+
+2. Login with wrong password
+![alt text](image-1.png)
+
+
+3. Hit invalid route
+![alt text](image-2.png)
