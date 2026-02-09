@@ -1,10 +1,16 @@
-const errorHandler = (err, req, res, next) => {
-  const statusCode = err.statusCode || 500;
+import logger from "../config/logger.js";
 
-  res.status(statusCode).json({
-    status: err.status || "error",
-    message: err.message || "Something went wrong",
+export const errorHandler = (err, req, res, next) => {
+  logger.error({
+    message: err.message,
+    statusCode: err.statusCode || 500,
+    method: req.method,
+    url: req.originalUrl,
+    stack: err.stack,
+  });
+
+  res.status(err.statusCode || 500).json({
+    success: false,
+    message: err.message || "Server Error",
   });
 };
-
-export default errorHandler;

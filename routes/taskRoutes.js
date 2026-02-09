@@ -1,13 +1,11 @@
 import express from "express";
+import { getTasks, createTask } from "../controllers/taskController.js";
 import protect from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.get("/", protect, (req, res) => {
-  res.json({
-    message: "Protected tasks accessed",
-    userId: req.user,
-  });
-});
+router.route("/")
+  .get(protect, getTasks)
+  .post(protect, createTask);
 
-export default router;   // ✅ REQUIRED
+export default router;
