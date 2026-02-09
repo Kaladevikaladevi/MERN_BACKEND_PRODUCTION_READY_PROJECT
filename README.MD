@@ -100,3 +100,28 @@ logs/combined.log Normal API Request
 Test 2: Trigger an Error
 ![alt text](image-3.png)
 ![alt text](image-2.png)
+
+
+
+
+
+
+
+Day-6
+
+Check Security Headers.Helmet is WORKING
+![alt text](image.png)
+
+
+Register User success
+![alt text](image-2.png)
+
+
+Rate Limiting Testing-Login API
+
+success
+![alt text](image-5.png)
+
+failed
+![alt text](image-3.png)
+
