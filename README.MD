@@ -125,3 +125,29 @@ success
 failed
 ![alt text](image-3.png)
 
+
+
+Day-7
+
+Swagger 
+![alt text](image.png)
+
+
+swagger registertion successfull responses
+![alt text](image-1.png)
+
+![alt text](image-3.png)
+
+Swagger login successfull responses
+![alt text](image-2.png)
+
+![alt text](image-4.png)
+
+server running
+![alt text](image-5.png)
+
+
+![alt text](image-6.png)
+
+mongoDB
+![alt text](image-7.png)

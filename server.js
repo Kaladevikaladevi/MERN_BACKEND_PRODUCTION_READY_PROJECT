@@ -1,36 +1,15 @@
-import express from "express";
+import app from "./app.js";
+import mongoose from "mongoose";
 import dotenv from "dotenv";
-import helmet from "helmet";
-import morgan from "morgan";
-
-import connectDB from "./config/db.js";
-import authRoutes from "./routes/authRoutes.js";
-import taskRoutes from "./routes/taskRoutes.js";
-import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
-connectDB();
 
-const app = express();
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
 
-// Security headers
-app.use(helmet());
+const PORT = process.env.PORT || 3000;
 
-// Logger
-app.use(morgan("dev"));
-
-// Body parser
-app.use(express.json());
-
-// Routes
-app.use("/api/auth", authRoutes);
-app.use("/api/tasks", taskRoutes);
-
-// Errors
-app.all("*", notFound);
-app.use(errorHandler);
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () =>
-  console.log(`Server running on port ${PORT}`)
-);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
