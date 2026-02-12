@@ -151,3 +151,20 @@ server running
 
 mongoDB
 ![alt text](image-7.png)
+
+
+
+
+
+
+
+DAY-8
+Register User: success
+![alt text](image.png)
+
+
+login User: success
+![alt text](image-1.png)
+
+swagger success
+![alt text](image-2.png)

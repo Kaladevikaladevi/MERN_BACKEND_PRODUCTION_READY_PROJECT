@@ -1,19 +1,35 @@
 {
-  "name": "mern_backend_production_ready",
+  "name": "mern_backend_production_ready_project",
   "version": "1.0.0",
-  "type": "module",
-  "main": "src/server.js",
-  "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+  "description": "Thunder client test result",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
   },
+  "scripts": {
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+}
+,
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaladevikaladevi/MERN_BACKEND_PRODUCTION_READY_PROJECT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaladevikaladevi/MERN_BACKEND_PRODUCTION_READY_PROJECT/issues"
+  },
+  "homepage": "https://github.com/Kaladevikaladevi/MERN_BACKEND_PRODUCTION_READY_PROJECT#readme",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^17.2.4",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.2.0",
+    "mongoose": "^9.2.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   },
